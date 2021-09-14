@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const Form = styled.div`
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  line-height: 1;
+  border: 5px solid;
+  padding: 1rem;
+  width: 300px;
+  height: 500px;
+  display: grid;
+  gap: 0.5em;
 `;
