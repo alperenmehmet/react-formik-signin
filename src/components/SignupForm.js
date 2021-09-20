@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Form } from './style';
+import { Button, Form } from './style';
 
 const SignupForm = () => {
   const formik = useFormik({
@@ -42,6 +42,7 @@ const SignupForm = () => {
       {formik.touched.firstName && formik.errors.firstName ? (
         <div>{formik.errors.firstName}</div>
       ) : null}
+
       <label htmlFor='lastName'>Last Name</label>
       <input
         id='lastName'
@@ -54,6 +55,7 @@ const SignupForm = () => {
       {formik.touched.lastName && formik.errors.lastName ? (
         <div>{formik.errors.lastName}</div>
       ) : null}
+
       <label htmlFor='email'>Email Address</label>
       <input
         id='email'
@@ -66,6 +68,7 @@ const SignupForm = () => {
       {formik.touched.email && formik.errors.email ? (
         <div>{formik.errors.email}</div>
       ) : null}
+
       <label htmlFor='password'>Password</label>
       <input
         id='password'
@@ -78,7 +81,8 @@ const SignupForm = () => {
       {formik.touched.password && formik.errors.password ? (
         <div>{formik.errors.password}</div>
       ) : null}
-      <button type='submit'>Submit</button>
+
+      <Button type='submit'>Submit</Button>
     </Form>
   );
 };
